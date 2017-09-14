@@ -29,8 +29,18 @@ img{
 }
 
 .text h1 {
-  color: #00ADBC;
+  color: #008066;
   font-size: 70px;
+  word-break: break-word;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: lighter;
+  letter-spacing: 2px;
+}
+
+.text h3 {
+  color: #00ADBC;
+  font-size: 40px;
   font-style: normal;
   font-variant: normal;
   font-weight: lighter;
@@ -63,9 +73,14 @@ img{
 
 #countdown span {
   color: #E5E5E5;
-  font-size: 46px;
+  font-size: 40px;
   font-weight: normal;
   margin-left: 20px;
   margin-right: 20px;
   text-align: center;
+}
+
+
+#countdown span b{  
+  font-size: 46px;  
 }

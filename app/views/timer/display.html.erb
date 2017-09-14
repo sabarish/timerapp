@@ -3,10 +3,12 @@
 <div id="main" class="row-fluid">
 <div class="content row-fluid">
 <div class="text row-fluid">
-<%= image_tag 'chronus-logo.svg' %><h1>CHRONUS HACKATHON</h1>
+<%= image_tag 'Chronus_4c.png' %>
+<h1>CHRONUS HACKATHON </h1>
+<h3>(SEP 22 10:00 AM - SEP 25 10:00 AM)</h3>
 </div> <!-- /.Text Div -->
 <div class="counter row-fluid">
-<h2>Starts In:</h2>
+<h2>STARTS IN:</h2>
 <div id="countdown">
   
 </div><!-- /#Countdown Div -->
@@ -20,7 +22,7 @@
 
 <script type="text/javascript">
 // set the date we're counting down to
-var target_date = new Date('Sep, 22, 2017').getTime();
+var target_date = new Date('September 22, 2017 10:00:00').getTime();
  
 // variables for time units
 var days, hours, minutes, seconds;
@@ -46,8 +48,7 @@ setInterval(function () {
     seconds = parseInt(seconds_left % 60);
      
     // format countdown string + set tag value
-    countdown.innerHTML = '<span class="days">' + days +  ' <b>Days</b></span> <span class="hours">' + hours + ' <b>Hours</b></span> <span class="minutes">'
-    + minutes + ' <b>Minutes</b></span> <span class="seconds">' + seconds + ' <b>Seconds</b></span>';  
+    countdown.innerHTML = '<span class="days"><b>' + days +  ' </b><span>Days</span></span> <span class="hours"><b>' + hours + ' </b><span>Hours</span></span> <span class="minutes"><b>' + minutes + ' </b><span>Minutes</span></span> <span class="seconds"><b>' + seconds + ' </b><span>Seconds</span></span>';  
  
 }, 1000);
 
