@@ -1,0 +1,71 @@
+html{
+    min-height:100%;/* make sure it is at least as tall as the viewport */
+    position:relative;
+}
+
+img{
+  width: 300px;  
+}
+
+.container {
+  margin: 0px auto;
+  padding: 0px;
+}
+
+#main { 
+  background: #3B3B3B;
+  height: 100%;
+}
+
+.content {
+  padding: 10px 10px;
+}
+
+.text {
+  border-bottom: 1px solid #262626;
+  margin-top: 40px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+.text h1 {
+  color: #00ADBC;
+  font-size: 70px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: lighter;
+  letter-spacing: 2px;
+}
+
+.counter {
+  background: #2C2C2C;
+  -moz-box-shadow:    inset 0 0 5px #000000;
+  -webkit-box-shadow: inset 0 0 5px #000000;
+  box-shadow:         inset 0 0 5px #000000;
+  min-height: 150px;
+  text-align: center;
+}
+
+.counter h2 {
+  color: #E5E5E5;
+  font-size: 24px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  padding-top: 20px;
+  margin-bottom: 30px;
+}
+
+#countdown {
+  color: #FFFFFF;
+}
+
+#countdown span {
+  color: #E5E5E5;
+  font-size: 46px;
+  font-weight: normal;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+}
