@@ -8,7 +8,7 @@
 <h3>(SEP 22 10:00 AM - SEP 25 10:00 AM)</h3>
 </div> <!-- /.Text Div -->
 <div class="counter row-fluid">
-<h2>STARTS IN:</h2>
+<h2 id='starts-in'>STARTS IN:</h2>
 <div id="countdown">
   
 </div><!-- /#Countdown Div -->
@@ -23,19 +23,35 @@
 <script type="text/javascript">
 // set the date we're counting down to
 var target_date = new Date('September 22, 2017 10:00:00').getTime();
+var end_date = new Date('September 25, 2017 10:00:00').getTime();
  
 // variables for time units
 var days, hours, minutes, seconds;
  
 // get tag element
 var countdown = document.getElementById('countdown');
+var startsIn = document.getElementById('starts-in');
  
 // update the tag with id "countdown" every 1 second
 setInterval(function () {
  
     // find the amount of "seconds" between now and target
     var current_date = new Date().getTime();
-    var seconds_left = (target_date - current_date) / 1000;
+
+    var isLarger = target_date > current_date;
+    var isActive = end_date > current_date;
+
+    if(isLarger){
+        var seconds_left = (target_date - current_date) / 1000;
+    }
+    else if(isActive){
+        var seconds_left = (end_date - current_date) / 1000;
+        startsIn.innerHTML = "ENDS IN:"
+    }
+    else{
+    	startsIn.innerHTML = "CLOSED"
+    	countdown.innerHTML = "<span>Thanks all for your participation! :)</span>"
+    }
  
     // do some time calculations
     days = parseInt(seconds_left / 86400);
@@ -48,7 +64,9 @@ setInterval(function () {
     seconds = parseInt(seconds_left % 60);
      
     // format countdown string + set tag value
-    countdown.innerHTML = '<span class="days"><b>' + days +  ' </b><span>Days</span></span> <span class="hours"><b>' + hours + ' </b><span>Hours</span></span> <span class="minutes"><b>' + minutes + ' </b><span>Minutes</span></span> <span class="seconds"><b>' + seconds + ' </b><span>Seconds</span></span>';  
+    if(isActive){
+        countdown.innerHTML = '<span class="days"><b>' + days +  ' </b><span>Days</span></span> <span class="hours"><b>' + hours + ' </b><span>Hours</span></span> <span class="minutes"><b>' + minutes + ' </b><span>Minutes</span></span> <span class="seconds"><b>' + seconds + ' </b><span>Seconds</span></span>';  
+    }  
  
 }, 1000);
 
